@@ -189,6 +189,13 @@ void getFileName(char* vFileext,const char* vDirExt,const tResource* r,const cha
 	const char* filename;
 	int pos;
 
+	/* Check if plain flag is set */
+	if (hasFlag(plain_flag)) {
+		/* Use simple numeric filename: res00000.bin */
+		sprintf(vFileext,"%s/res%05d.bin",vDirExt,r->id.value);
+		return;
+	}
+
 	if (r->path==NULL) {
 		pos=((r->type<RES_FILE_TYPES_COUNT)&&(r->type>=0))?r->type:eResTypeBinary;
 		unknownFile.typeCount[pos]++;

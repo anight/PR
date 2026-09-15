@@ -190,6 +190,8 @@ pr.h: Princed Resources : English language strings
 #define PARSING_HELP_PART5 "\
        --format=FORMAT        generate the item files in the unknown file using\n\
                               the given format\n\
+       --plain                export resources with numeric filenames (res00000.bin)\n\
+                              without creating directory structure\n\
        --unknown              generate the unknown file without performing\n\
                               any extraction\n\
    -v, --verbose              explain what is being done\n\

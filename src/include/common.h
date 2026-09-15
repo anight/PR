@@ -175,6 +175,7 @@ typedef enum {
 {"recursive",   no_argument,       0,'r'},\
 {"datfile",     required_argument, 0,'t'},\
 {"unknown",     no_argument,       0,2},\
+{"plain",       no_argument,       0,4},\
 {"verbose",     no_argument,       0,'v'},\
 {"version",     no_argument,       0,1},\
 {"xml-optimize",required_argument, 0,3}\
@@ -197,7 +198,7 @@ PARSING_OPTRAW\
 #define verbose_flag     0x0200
 #define version_flag     0x0400
 #define unknown_flag     0x0800
-#define undef1_flag      0x1000
+#define plain_flag       0x1000
 #define undef2_flag      0x2000
 #define undef3_flag      0x4000
 #define undef4_flag      0x8000

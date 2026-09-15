@@ -101,11 +101,15 @@ int main (int argc, char **argv) {
 					break;
 				case 2:
 					setFlag(unknown_flag);
+					break;
 				case 'x':
 				case 'e':
 					if (hasFlag(classify_flag|import_flag)) setFlag(help_flag);
 					setFlag(export_flag);
 					dirName=strallocandcopy(optarg);
+					break;
+				case 4:
+					setFlag(plain_flag);
 					break;
 				case 'b':
 					setFlag(backup_flag);
@@ -145,6 +149,7 @@ int main (int argc, char **argv) {
 					break;
 				case 'v':
 					setFlag(verbose_flag);
+					break;
 				case -1:
 					break;
 				case 3:
@@ -154,6 +159,7 @@ int main (int argc, char **argv) {
 					break;
 				case 1:
 					setFlag(version_flag);
+					break;
 				default:
 					setFlag(help_flag);
 		}
